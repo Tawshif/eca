@@ -1,0 +1,41 @@
+.page2{
+	fieldset{
+		@include clearfix();
+		border: none;
+		padding: 15px 20px;
+		display: block;
+		@include box-sizing();  
+		.form-title{
+			font-weight: bold;
+			padding: 0px 0px 10px 0px;		 
+		}
+		label{
+			margin-bottom: 15px;  
+			&:last-child{
+				margin-bottom: 0px !important;
+			}
+		}
+	}
+	.accordian{
+		.textfield--w100{
+			width: 	100px; 
+		}
+		p{
+			font-size: $font-size-base;
+			margin-top: 10px;  
+		}
+
+
+	}
+	.select-submit-area{
+		.wraper{
+			padding: 0px 15px; 
+			.select{
+				margin-bottom: 5px; 
+			}
+			.btn{
+				margin: 25px 0px;
+			}			
+		}
+	}
+}

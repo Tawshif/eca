@@ -1,0 +1,20 @@
+.contact{
+	padding: 15px;
+	display: block;
+	@include box-sizing();
+	line-height: 26px;
+	font-style: normal;
+	color:$gray-base;
+	font-size: $font-size-base; 
+}
+.email{
+  text-decoration: none;
+  font-weight: bold;
+  color: $gray-base;
+  font-style: normal;   
+}
+.msg{
+	display: block;
+	margin-top: 10px;
+	font-size: $font-size-large;   
+}

@@ -1,0 +1,47 @@
+.footer{
+	@include clearfix();
+	background: $gray-base;
+	color: $white-base;
+	font-size: ceil(($font-size-base * 0.80));
+	height: 235px;
+	@include box-sizing();
+	padding: 20px; 
+	a{
+		text-decoration: none;
+		color: $white-base; 
+	}
+
+	@at-root{
+		.footer__logo{
+			@include clearfix();
+			margin: 20px 0px;
+			display: block; 
+			strong{}
+		}
+		.footer__social-link{
+			@include clearfix();
+			display: inline-block;
+			margin-bottom: 15px; 
+			.links{
+				margin: 0px 10px; 
+				&:first-child{
+					margin-left: 0px; 
+				}
+			}
+		}
+		.footer__nav{
+			@include clearfix();
+			display: inline-block;
+			margin:20px 0px; 
+			.footer__nav-links{
+				margin: 0px 10px; 
+				&:first-child{
+					margin-left: 0px; 
+				}
+			}	
+		}
+		.footer__rights{
+			
+		}
+	}
+}

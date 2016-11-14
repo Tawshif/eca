@@ -1,0 +1,23 @@
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+@mixin radius($size){
+	-webkit-border-radius: $size; 
+	border-radius: $size; 
+}
+@mixin size($height,$width){
+	height: $height;
+	width: $width;  
+}
+@mixin box-sizing( $box:border-box){
+	-webkit-box-sizing: $box; 
+	-moz-box-sizing: $box; 
+	box-sizing: $box; 
+}

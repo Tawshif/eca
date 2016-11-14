@@ -1,0 +1,179 @@
+.header__nav {
+    position: fixed;
+    z-index: 500;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 50px;
+    background: $white-base;
+    @include box-sizing;
+    @include clearfix();
+}
+
+.header__nav__logo {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: $gray-base;
+    strong {
+        display: inline-block;
+        margin-top: 15px;
+        text-align: center;
+        color: black;
+    }
+}
+
+.header__nav__btn {
+    font-size: 30px;
+    float: right;
+    width: 50px;
+    margin: 0 0 0 0;
+    @extend .header__nav__logo;
+    span {
+        display: block;
+        margin-top: 9px;
+    }
+}
+
+.header__nav__text {
+    font-weight: bold;
+    float: right;
+    margin-top: 16px;
+    @extend .header__nav__logo;
+}
+
+.hero {
+    position: relative;
+    height: 360px;
+    margin-top: 50px;
+    text-align: center;
+    background-image: url('../images/car.jpg');
+    background-position: center;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    @include clearfix();
+    @at-root {
+        .hero__texts {
+            margin-top: 65px;
+            margin-bottom: 10px;
+            h2 {
+                margin-top: 5px;
+                margin-bottom: 0;
+            }
+            h5 {
+                font-weight: bold;
+                margin-top: 5px;
+                margin-bottom: 0;
+            }
+        }
+        .hero_navigate {
+            display: block;
+            margin: 35px 0;
+            h5 {
+                font-weight: normal;
+                margin-top: 7px;
+            }
+        }
+        .textfield__group {
+            margin: 0;
+            padding: 0 20px;
+            border: none;
+            .textfield {
+                border-left: none;
+            }
+            .textfield--full {
+                border-left: 1px solid lighten($gray-base, 80%);
+            }
+        }
+        .textfield__group--inline > * {
+            float: left;
+            width: calc(100%/3);
+        }
+    }
+}
+
+/* helper */
+.hero--long {
+    height: 510px;
+    .hero__texts {
+        margin-top: 175px;
+        margin-bottom: 10px;
+        h2 {
+            margin-top: 5px;
+            margin-bottom: 0;
+        }
+    }
+    .hero_navigate {
+        display: block;
+        margin: 45px 0;
+        h5 {
+            font-weight: normal;
+            margin-top: 10px;
+        }
+    }   
+}
+.hero-texts--white {
+    color: $white-base;
+}
+
+/* page header header steps */
+.page-header-top{
+    @include clearfix();
+    height: 65px;
+
+    @include box-sizing();
+    font-size: 0px; 
+      
+    .btn__back{
+        position: absolute;
+        left: 0px; 
+        top: 0px; 
+        padding: 0px;
+        font-weight: bold;   
+        font-size: $font-size-h2;
+        color :$gray-light;
+        border: none;
+        @include box-sizing();
+        height: 65px;
+        width: 65px;     
+    }   
+    .title{
+        font-size:$font-size-h5;
+        font-weight: bold; 
+        text-align: center;
+        display: block;
+        box-sizing: border-box;
+        position: relative;
+        height: 65px;
+        line-height: 65px;
+    }
+}
+.page-header-top--border{
+    border-bottom: 1px solid $gray-lighter;
+    .btn__back{
+        height: 64px;
+        cursor: pointer;
+        z-index: 100;
+    }
+}
+
+.thin-steps{
+    @include clearfix();
+    display: flex;
+    height: 10px;
+    background:lighten($gray, 50%);
+    .thin-steps__step{
+        height: 10px;
+        flex: 1;
+    }
+    .active{
+        background: black; 
+    }
+}

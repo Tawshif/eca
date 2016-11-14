@@ -1,0 +1,86 @@
+.home{
+	.schedule{
+		padding: 10px 30px;
+		display: block;
+		height: 130px; 
+		h5{
+			font-weight: bold;  
+		}
+		@include clearfix();
+		@at-root{
+		.schedule__media{
+			
+		}
+		.schedule__media-left{
+			float: left;
+			width:calc(35%);
+			.icon{
+				margin-top: 5px;
+				margin-left: 5px;
+				.logo-btn{
+					font-size: 26px;  
+				}
+			}
+			.caption{
+				margin-top: 5px;
+				font-size: $font-size-small;
+				color: lighten($gray-base, 30%);
+				display: block;
+			}
+		}
+		.schedule__media-right{
+			float: left;
+			width:calc(65%);
+			font-weight: bold;  
+			h3{
+				font-size: 26px; 
+				margin:0px; 
+				font-weight: bold;
+			}
+			h4{
+				font-size: 18px; 
+				font-weight: bold;
+				margin: 6px 0px; 	
+			}
+			p{
+				font-weight: normal ;
+				font-size: 16px;
+				margin: 0px;  
+				
+			}
+
+		}
+		}
+	}
+	.card{
+		position: relative;
+		@include box-sizing();
+		padding: 25px; 
+		display: block;
+		background-image: url('../images/car.jpg');
+    	background-position:center ;
+    	-webkit-background-size: cover; 
+      	-o-background-size: cover; 
+      	background-size: cover;
+		height: 225px;
+		text-align: center ;  
+		@include clearfix();
+		h4{
+			margin-top: 20px;
+			margin-bottom: 10px; 
+			font-weight: bold;
+		 }
+		p{
+			font-size: 14px; 
+			margin-top: 5px; 
+			margin-bottom: 20px;			
+			font-weight: bold;
+		}
+		.btn{
+			margin-top: 15px;
+			width: 80%; 
+			color: lighten($gray-base, 60%);
+			border: none; 
+		}
+	}
+}

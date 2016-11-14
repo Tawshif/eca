@@ -1,0 +1,42 @@
+.btn-tabs{
+	@include clearfix();
+	@include box-sizing();  
+	padding: 20px;
+	display: flex;
+	font-size: $font-size-base;   
+	.btn-tabs__tab{
+		-webkit-flex:1; 
+		-ms-flex:1; 
+		flex:1; 	
+	    background: $gray-lighter;
+	    color: 	$white-base;
+	    margin-right: 20px;
+	    text-align: center;
+	    vertical-align: middle;
+	    padding: 5px;
+	    line-height: 22px;
+	    border-color: darken($white-base, 10%); 
+	    &:last-child{
+	    	margin-right: 0px; 
+	    }
+	    &.active{
+	    	background: $gray-base; 
+	    }
+	}
+}
+
+.tabs{
+	display: flex;
+	.tabs__tab {
+		-webkit-flex: 1; 
+		-ms-flex: 1; 
+		flex: 1;
+	    border: none;
+	    background: $gray-lighter;
+		&.active{
+			background: $gray-base;
+			color: $white-base; 
+		}
+
+	}
+}

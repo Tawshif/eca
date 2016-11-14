@@ -1,0 +1,61 @@
+// Main button
+.btn
+{
+    font-style: normal;
+    font-size: $font-size-base; 
+    line-height: 1em;
+    display: inline-block;
+    min-height: 1em;
+    margin: 0;
+    padding: 10px 25px;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-transition: opacity .1s ease,background-color .1s ease,color .1s ease,box-shadow .1s ease,background .1s ease;
+            transition: opacity .1s ease,background-color .1s ease,color .1s ease,box-shadow .1s ease,background .1s ease;
+    text-align: center;
+    vertical-align: baseline;
+    text-decoration: none;
+    text-transform: none;
+    color: $gray-base;
+    border: 1px solid $gray-light;
+    outline: 0;
+    background: $white-base;
+    box-shadow: 0 0 0 1px transparent inset,0 0 0 0 rgba(34,36,38,.15) inset;
+    text-shadow: none;
+    will-change: '';
+    @include box-sizing;
+}
+
+.btn--black{
+	color: $gray-light;
+	background: $gray-base;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.btn--full{
+	width: 100%; 
+}
+
+// Logo button
+
+.logo-btn{
+	@extend .btn;
+	@include radius(50%);
+    @include size(50px, 50px);
+    padding: 0px; 
+    font-size: $font-size-h4;  
+    color: $gray-base;
+    background: $white-base;
+    border: 1px solid $gray-light; 
+}
+
+.logo-btn--mild{
+    color: lighten($gray-base, 30%);
+    span{
+        color: lighten($gray-base, 30%);
+    }
+}

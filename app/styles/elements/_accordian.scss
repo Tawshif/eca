@@ -1,0 +1,48 @@
+// .accordian{
+// 	padding: 15px 20px 5px;
+// 	font-size: $font-size-large;
+// 	color: $gray-light; 
+// 	font-weight: normal;
+// 	border-bottom: 2px solid $gray-lighter;
+// 	@at-root{
+// 		.accordian-title{
+// 			margin-bottom:0px;
+// 			.email{
+
+// 			} 
+// 		}
+// 		.accordian-body{
+// 			padding: 5px 0px;
+// 			margin-top: 5px;  
+// 			display: none; 
+// 		}
+// 		.accordian-body.open{
+// 			display: block;
+// 		}
+// 	}
+// }
+
+.accordian{
+	font-size: $font-size-large;
+	color: $gray-light; 
+	font-weight: normal;
+	@at-root{
+		.accordian-title{
+			margin-bottom:0px;
+			padding: 15px 20px 5px;
+			border-bottom: 2px solid $gray-lighter;
+			.email{} 
+		}
+		.accordian-body{
+			padding: 15px 20px 5px;
+			margin-top: 5px;  
+			display: none; 
+		}
+		.accordian-body.open{
+			display: block;
+		}
+	}
+	&.accordian--text-black{
+		color: $gray-base;
+	}
+}
