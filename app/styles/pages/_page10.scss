@@ -1,0 +1,52 @@
+/* page 10 */
+
+.page10{
+	
+	.location-images{
+		display: flex;
+		figure{
+			-webkit-flex: 1;
+			-ms-flex: 1;
+			flex: 1;
+		    margin-left: 10px;
+		    margin-right: 0px; 
+		    margin-top: 10px;
+		    margin-bottom: 10px;   
+		    &:last-child{
+				margin-right: 10px;
+		    }  
+			img{
+				height: auto;
+			    max-height: 120px;
+			    max-width: 100%;
+			    margin: 0 auto;
+			    display: block;
+			}
+		}
+	}
+	.media--bordered{
+		padding: 16px 20px;
+		border-bottom: 2px solid $gray-lighter;
+	}
+	.parking-info__table{
+		th, td {
+			ul{
+				-webkit-padding-start: 15px;
+				-webkit-margin-before: 1px;
+				-webkit-margin-after: 1px;
+				-webkit-margin-start: 0px;
+				-webkit-margin-end: 0px;
+				font-size: 10px;
+			}
+			 &:first-child{
+	        	font-size: $font-size-base;
+	            padding: 20px 0px 10px 20px;
+	            width: 30%; 
+	        }
+	        &:last-child{
+	            width: 70%;
+	        }
+    	}
+	}
+		
+}
