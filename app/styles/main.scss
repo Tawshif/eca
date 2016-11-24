@@ -1,10 +1,11 @@
 //Common
 @import 'variables';
-@import 'normalize';
 @import 'mixins';
 @import 'fonts';
-@import 'common';
 @import 'helpers';
+@import 'normalize';
+@import 'common';
+
 
 //Elements
 @import 'elements/typography';

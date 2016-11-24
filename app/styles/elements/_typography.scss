@@ -3,6 +3,15 @@
 // --------------------------------------------------
 
 
+@include fontFace($font-family-base, "../fonts/exo2/Exo2-Regular");
+@include fontFace($font-family, "../fonts/orbitron-black");
+@include fontFace($font-family, "../fonts/hiragino-kaku-gothic-pro");
+body{
+  font-family: $font-family;
+    text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
 // Headings
 // -------------------------
 

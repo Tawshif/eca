@@ -3,7 +3,7 @@ const gulp = require('gulp');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const browserSync = require('browser-sync');
 const del = require('del');
-//const wiredep = require('wiredep').stream;
+const wiredep = require('wiredep').stream;
 const runSequence = require('run-sequence');
 
 const $ = gulpLoadPlugins();
@@ -62,7 +62,7 @@ gulp.task('html', ['styles', 'scripts'], () => {
   return gulp.src('app/*.html')
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if('*.js', $.uglify()))
-    .pipe($.if('*.css', $.cssnano({safe: true, autoprefixer: false})))
+    .pipe($.if('*.css', $.cssnano({safe: true, autoprefixer: true})))
     .pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
     .pipe(gulp.dest('dist'));
 });
@@ -147,20 +147,20 @@ gulp.task('serve:test', ['scripts'], () => {
 });
 
 // inject bower components
-// gulp.task('wiredep', () => {
-//   gulp.src('app/styles/*.scss')
-//     .pipe(wiredep({
-//       ignorePath: /^(\.\.\/)+/
-//     }))
-//     .pipe(gulp.dest('app/styles'));
+ gulp.task('wiredep', () => {
+   gulp.src('app/styles/*.scss')
+     .pipe(wiredep({
+       ignorePath: /^(\.\.\/)+/
+     }))
+     .pipe(gulp.dest('app/styles'));
 
-//   gulp.src('app/*.html')
-//     .pipe(wiredep({
-//       exclude: ['bootstrap-sass'],
-//       ignorePath: /^(\.\.\/)*\.\./
-//     }))
-//     .pipe(gulp.dest('app'));
-// });
+   gulp.src('app/*.html')
+     .pipe(wiredep({
+       exclude: ['bootstrap-sass'],
+       ignorePath: /^(\.\.\/)*\.\./
+     }))
+     .pipe(gulp.dest('app'));
+ });
 
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));

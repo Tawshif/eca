@@ -21,7 +21,7 @@
 			width: 	100px; 
 		}
 		p{
-			font-size: $font-size-base;
+			@include font-size($font-size-base);
 			margin-top: 10px;  
 		}
 
